@@ -54,7 +54,7 @@ function App() {
     "Nov",
     "Dec",
   ];
-  const [time, setTime] = useState(`${hours}:${seconds}`); //using the useState hook to get the data from the local time and set it to the time variable
+  //using the useState hook to get the data from the local time and set it to the time variable
   const [dateTime, setDateTime] = useState(
     `${days[day]}, ${months[month]} ${year}`
   ); //using the useState hook to get the data from the local date and set it to the dateTime variable
