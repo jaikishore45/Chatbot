@@ -1,6 +1,6 @@
 import "./App.css";
 import image from "./img/bot-img.jpg";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import moment from 'moment'
 
 
@@ -12,8 +12,7 @@ function App() {
  
 
   const date = new Date();
-  const hours = date.getHours();
-  const seconds = date.getSeconds();
+
   const day = date.getDay();
   const month = date.getMonth();
   const year = date.getFullYear();
@@ -55,7 +54,7 @@ function App() {
     "Dec",
   ];
   //using the useState hook to get the data from the local time and set it to the time variable
-  const [dateTime, setDateTime] = useState(
+  const [dateTime] = useState(
     `${days[day]}, ${months[month]} ${year}`
   ); //using the useState hook to get the data from the local date and set it to the dateTime variable
   const checkStatus = (e) => {
@@ -76,8 +75,8 @@ function App() {
     }
   };
   const handleInput = () => {
-    const botMessage = document.querySelector("#message1");
-    const userMessage = document.querySelector("#message2");
+    // const botMessage = document.querySelector("#message1");
+    // const userMessage = document.querySelector("#message2");
     const inputRef = input.current;
     const getHumanMessage = humanMessage.current;
     const getBotMessage = botmessage.current;
